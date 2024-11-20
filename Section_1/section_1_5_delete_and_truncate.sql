@@ -19,7 +19,8 @@ INSERT INTO employees (id, first_name, last_name, email) VALUES
 (4, 'Alice', 'Williams', 'alicewilliams@example.com');
 
 delete from tutorial.employees where id = 3;
-delete from tutorial.employees where id in (1, 4);
+delete from tutorial.employees where id in (1, 4); --delete employee with 1 & 4 as id
+
 
 TRUNCATE TABLE tutorial.employees;
 
