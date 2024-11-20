@@ -3,7 +3,7 @@ BEGIN TRANSACTION;
 -- Transfer 100 from account A to account B
 UPDATE accounts SET balance = balance - 100 WHERE account_id = 'A';
 UPDATE accounts SET balance = balance + 100 WHERE account_id = 'B';
-
+-- you can rollback a non commited query
 COMMIT;
 
 
