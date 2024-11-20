@@ -38,7 +38,7 @@ BEGIN
 
 	RETURN v_avg_salary;
 END;
-$$;
+$$; --End function definition 
 
 select average_salary(1);
 
