@@ -1,0 +1,3 @@
+install dbeaver 
+install postgredb 
+use the commands of course
