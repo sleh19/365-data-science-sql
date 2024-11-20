@@ -10,7 +10,7 @@ INSERT INTO my_table (value) VALUES (1), (2), (3), (4), (5);
 select * from my_table;
 
 -- Define a variable to hold the sum of the values
-do $$
+do $$ --define PGSQL bloc where the procedure open and close marked by $$
 declare
   da_sum INTEGER := 0;
 row RECORD;
