@@ -23,3 +23,10 @@ FROM orders;
 SELECT order_id, customer_id, order_date, order_total
 FROM orders
 having row_number() OVER (PARTITION BY customer_id ORDER BY order_total desc) = 1
+
+--to detect the max  purchase per customers 
+with temp as (
+select order_id, customer_id, order_date, order_total,
+max (order_total) over (partition by customer_id) max_order_per_cust
+from orders o)
+select * from temp;
