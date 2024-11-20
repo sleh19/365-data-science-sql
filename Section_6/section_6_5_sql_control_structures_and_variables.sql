@@ -13,7 +13,12 @@ select * from my_table;
 do $$ --define PGSQL bloc where the procedure open and close marked by $$
 declare
   da_sum INTEGER := 0;
-row RECORD;
+row RECORD; 
+/*A record type is a composite data type that consists of one or more identifiers and their corresponding data types.
+
+You can create user-defined record types by using the TYPE IS RECORD statement within a package or by using the CREATE TYPE (Object) statement.
+
+Dot notation is used to reference fields in a record. For example, record.field.*/
 
 begin
 -- Loop over each row in the table and add the value to the sum
