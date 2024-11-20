@@ -34,7 +34,7 @@ DECLARE
 BEGIN
 	SELECT AVG(salary) INTO V_avg_salary
 	FROM employees
-	WHERE department_id = _department_id;
+	WHERE department_id = p_department_id;
 
 	RETURN v_avg_salary;
 END;
